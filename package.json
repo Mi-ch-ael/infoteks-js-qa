@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "playwright/login.spec.js",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test --reporter=allure-playwright,list",
+    "serve-report": "npx allure generate ./allure-results --clean -o report && npx allure open ./report"
   },
   "keywords": [],
   "author": "Mi-ch-ael",
@@ -11,6 +12,8 @@
   "description": "",
   "dependencies": {
     "@playwright/test": "^1.26.0",
+    "allure-commandline": "^2.18.1",
+    "allure-playwright": "^2.0.0-beta.19",
     "playwright": "^1.26.0"
   }
 }
